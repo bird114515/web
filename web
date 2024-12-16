@@ -1,76 +1,16 @@
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mobile Page</title>
-  <style>
-    body,
-    html {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-    }
-
-   .fullscreen-div {
-      width: 100%;
-      height: 100%;
-      display: none;
-    }
-
-   .red-div img {
-      width: 100%;
-      height: 100%;
-    }
-
-   .blue-div img {
-      width: 100%;
-      height: 100%;
-    }
-
-   .yellow-div img {
-      width: 100%;
-      height: 100%;
-    }
-
-   .text {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      font-size: 24px;
-      text-align: center;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Switcher</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-  <div class="fullscreen-div red-div" onclick="showNext()">
-    <img src="red_image.jpg" alt="Red Image">
-  </div>
-  <div class="fullscreen-div blue-div" style="display: none;">
-    <img src="blue_image.jpg" alt="Blue Image">
-    <div class="text" id="textDiv">中式恐怖</div>
-  </div>
-  <div class="fullscreen-div yellow-div" style="display: none;">
-    <img src="yellow_image.jpg" alt="Yellow Image">
-  </div>
-
-  <script>
-    let currentDiv = 1;
-
-    function showNext() {
-      if (currentDiv === 1) {
-        document.querySelector('.red-div').style.display = 'none';
-        document.querySelector('.blue-div').style.display = 'block';
-        currentDiv = 2;
-      } else if (currentDiv === 2) {
-        document.querySelector('.blue-div').style.display = 'none';
-        document.querySelector('.yellow-div').style.display = 'block';
-        currentDiv = 3;
-      }
-    }
-  </script>
+    <div id="image-container">
+        <img src="red.jpg" alt="Red Image" id="main-image">
+        <p id="text" style="display: none;">仰天大笑出门去，我辈岂是蓬蒿人</p>
+    </div>
+    <script src="script.js"></script>
 </body>
-
 </html>
